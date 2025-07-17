@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrap {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+
+}
+
+.nav-menu {
+    background-color: rgb(8, 88, 8);
+    display: flex;
+    /* Neu: Flexbox aktivieren */
+    min-height: 2.5em;
+    /* Höhe der Leiste, anpassen wie gewünscht */
+    align-items: center;
+}
+
+.link-nav-menu {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    white-space: nowrap;
+    /* Optional: etwas Innenabstand */
+
+}
+
+.link-nav-menu:hover {
+    background-color: rgb(16, 176, 16);
+
+}
+
+.list-nav-menu {
+    list-style: none;
+}
+
+.Text-Firmenvorstellung-kurz {
+    background-image: url('hecken-schneiden-von-oktober-bis-februar-sind-radikale-heckenschnitte-erlaubt.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.Text-Firmenvorstellung-kurz-text {
+    font-size: 3em;
+    padding: 6em;
+    text-align: center;
+    color: white;
+    text-shadow: 0.3em 0.3em 0.3em rgba(0, 0, 0, 1);
+}
+
+.footer {
+    background-color: rgb(8, 88, 8);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background-image: linear-gradient(to top, rgb(8, 88, 8), rgb(16, 176, 16));
+}
+
+#titel_products {
+    font-size: 2em;
+    color: white;
+    padding: 1em;
+}
+
+.product-list {
+    display: flex;
+}
+
+.product-item {
+    list-style: none;
+    padding: 1em;
+    color: white;
+    background: grey;
+    border-radius: 10em;
+    margin: 2em 7em;
+
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.news_titel {
+    font-size: 2em;
+    color: white;
+    padding: 1em;
+}
+
+.Texte_ueberUns,
+.Texte_kontakt,
+.Texte_preise{
+    background-image: linear-gradient(to top, rgb(8, 88, 8), rgb(16, 176, 16));
+    color: white;
+    flex: 1; /* Hinzufügen: Lässt dieses Element wachsen und den Platz in .content füllen */
+    padding-bottom: 3em; /* Behalten wir für einen schönen Abstand zum Footer bei */
+}
+
+.ueberUns_Titel {
+    text-align: center;
+    padding: 1.5em;
+}
+
+.ueberUns_Text {
+    font-size: 1.4em;
+    padding: 1em 8em;
+    text-align: justify;
+}
+
+.kontakt_Titel {
+    text-align: center;
+    padding: 1.5em;
+    font-size: 2.5em;
+}
+
+.kontakt_Formular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Leichter, transparenter Hintergrund */
+    padding: 3em;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Dezenter Schatten */
+    max-width: 600px;
+    /* Maximale Breite für das Formular */
+    margin: 2em auto;
+    /* Zentrieren und Abstand nach oben/unten */
+}
+
+.contact_infos {
+    margin-bottom: 1.5em;
+    /* Abstand zwischen den Eingabefeldern */
+    width: 100%;
+    /* Volle Breite innerhalb des Formulars */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact_infos label {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    color: white;
+}
+
+.kontakt_Formular input[type="text"],
+.kontakt_Formular input[type="email"],
+.kontakt_Formular textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Leichter Hintergrund für Felder */
+    color: white;
+    font-size: 1em;
+    outline: none;
+    /* Keine Umrandung beim Fokus */
+    transition: border-color 0.3s ease;
+}
+
+.kontakt_Formular input[type="text"]:focus,
+.kontakt_Formular input[type="email"]:focus,
+.kontakt_Formular textarea:focus {
+    border-color: rgb(16, 176, 16);
+    /* Grüne Umrandung beim Fokus */
+}
+
+.kontakt_Formular button[type="submit"] {
+    background-color: rgb(8, 88, 8);
+    /* Dunkelgrüner Button */
+    color: white;
+    padding: 1em 2.5em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1.5em;
+}
+
+.kontakt_Formular button[type="submit"]:hover {
+    background-color: rgb(16, 176, 16);
+    /* Helleres Grün beim Hover */
+    transform: translateY(-2px);
+    /* Leichter "Pop"-Effekt */
+}
+
+
+.kontakt_Text {
+    font-size: 1.4em;
+    padding: 0em 8em;
+    text-align: center;
+}
+
+.kontakt_Formular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_infos {
+    margin: 2em;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap; /* Ermöglicht das Umbrechen der Karten in die nächste Zeile */
+    justify-content: center; /* Zentriert die Karten horizontal */
+    gap: 2em; /* Abstand zwischen den Karten */
+    padding: 2em 0; /* Vertikaler Abstand für die Liste */
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Leichter, transparenter Hintergrund */
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Dezenter Schatten */
+    max-width: 300px; /* Maximale Breite für jede Karte */
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease; /* Sanfter Übergang für Hover-Effekt */
+}
+
+.product-card:hover {
+transform: translateY(-5px); /* Leichter "Pop"-Effekt beim Hover */
+}
+
+.product-card h4 {
+font-size: 1.8em;
+margin-bottom: 0.8em;
+color: white;
+}
+
+.product-card p {
+font-size: 1.1em;
+line-height: 1.5;
+}
+                
+.product-list {     
+    display: flex;      
+    flex-wrap: wrap; /* Ermöglicht das Umbrechen der Karten in die nächste Zeile */         
+    justify-content: center; /* Zentriert die Karten horizontal */       
+    gap: 2em; /* Abstand zwischen den Karten */          
+    padding: 2em 0; /* Vertikaler Abstand für die Liste */
+                
+}
+
+                
+.product-card {           
+    background-color: rgba(255, 255, 255, 0.1); /* Leichter, transparenter Hintergrund */           
+    padding: 2em;          
+    border-radius: 15px;          
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Dezenter Schatten */          
+    max-width: 300px; /* Maximale Breite für jede Karte */             
+    text-align: center;         
+    color: white;         
+    transition: transform 0.3s ease; /* Sanfter Übergang für Hover-Effekt */     
+}
+
+                
+.product-card:hover {
+transform: translateY(-5px); /* Leichter "Pop"-Effekt beim Hover */
+}
+
+                
+.product-card h4 {        
+    font-size: 1.8em;
+    margin-bottom: 0.8em;          
+    color: white;          
+}
+
+                
+.product-card p {        
+    font-size: 1.1em;    
+    line-height: 1.5;   
+}
+
+.news_text {
+    font-size: 1.2em;
+    padding: 1em 2em;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 1em;
+}
+
+#successMessage {
+    display: none; /* Standardmäßig versteckt */
+    color: rgb(18, 191, 18);
+    font-size: 1.2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* Haupttitel der Preis-Seite */
+.preise_Titel {
+    text-align: center;
+    font-size: 2.8em;
+    padding: 1.5em 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Einleitender und abschließender Text */
+.preise_Text {
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px; /* Begrenzt die Breite für bessere Lesbarkeit */
+    margin: 0 auto; /* Zentriert den Textblock */
+    padding: 0 2em 3em 2em; /* Abstand oben/unten und seitlich */
+}
+
+/* Container für die Preiskarten, um sie zu zentrieren */
+.preise_angebot_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em; /* Abstand zwischen den Karten */
+    padding: 2em;
+}
+
+/* Styling für die einzelnen Preiskarten */
+.preise_karte {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2.5em;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 320px; /* Feste Breite für einheitliches Aussehen */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preise_karte:hover {
+    transform: translateY(-8px); /* Hebt die Karte beim Hovern an */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Untertitel (Name der Dienstleistung) in der Karte */
+.preise_Untertitel {
+    font-size: 1.9em;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+/* Leistung/Preis in der Karte */
+.preise_Leistung {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #c8ffc8; /* Ein helles Grün, um den Preis hervorzuheben */
+    background-color: rgba(8, 88, 8, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    display: inline-block; /* Damit der Hintergrund nur den Text umschließt */
+    margin-top: 0.5em;
+}
+
+
+@media (max-width: 768px) {
+
+    /* --- Header-Bereich auf der Startseite --- */
+    .Text-Firmenvorstellung-kurz-text {
+        font-size: 2.2em;  /* Schriftgröße für Mobilgeräte verkleinern */
+        padding: 4em 1.5em; /* Vertikalen Abstand beibehalten, horizontalen stark reduzieren */
+    }
+
+    .ueberUns_Text {
+        font-size: 1.1em;   /* Schriftgröße für bessere Lesbarkeit anpassen */
+        padding: 1em 1.5em; /* Horizontalen Abstand drastisch reduzieren */
+        text-align: left;   /* Blocksatz auf Mobilgeräten vermeiden, da er zu unschönen Lücken führen kann */
+    }
+
+    .kontakt_Text {
+    font-size: 1.1em;
+    padding: 0em 1.5em 1em 1.5em; /* Horizontalen Abstand anpassen */
+    text-align: center;
+    }
+
+    .kontakt_Formular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Leichter, transparenter Hintergrund */
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Dezenter Schatten */
+    max-width: 300px;
+    /* Maximale Breite für das Formular */
+    margin: 1em auto;
+    /* Zentrieren und Abstand nach oben/unten */
+    }
+
+        /* --- Navigationsmenü --- */
+    .nav-menu {
+        overflow-x: auto; /* Ermöglicht horizontales Scrollen nur für das Menü */
+        -ms-overflow-style: none;  /* Versteckt Scrollbar (IE/Edge) */
+        scrollbar-width: none;  /* Versteckt Scrollbar (Firefox) */
+    }
+
+    /* Versteckt die Scrollbar in Webkit-Browsern (Chrome, Safari) */
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+}
