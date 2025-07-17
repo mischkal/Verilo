@@ -52,7 +52,7 @@ body {
 }
 
 .Text-Firmenvorstellung-kurz {
-    background-image: url(hecken-schneiden-von-oktober-bis-februar-sind-radikale-heckenschnitte-erlaubt.png);
+    background-image: url('hecken-schneiden-von-oktober-bis-februar-sind-radikale-heckenschnitte-erlaubt.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
